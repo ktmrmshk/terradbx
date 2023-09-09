@@ -6,8 +6,8 @@ module "endpoints" {
 
   endpoints = {
     s3 = {
-      service      = "s3"
-      service_type = "Gateway"
+      service         = "s3"
+      service_type    = "Gateway"
       route_table_ids = module.vpc.private_route_table_ids
       tags = {
         Name = "${local.prefix}-s3-ep"

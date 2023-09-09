@@ -1,7 +1,7 @@
 data "aws_availability_zones" "available" {}
 
 output "azs" { value = slice(data.aws_availability_zones.available.names, 0, 2) }
-output "debug" { 
+output "debug" {
   value = module.vpc.private_route_table_ids
 }
 
@@ -13,6 +13,7 @@ module "vpc" {
   cidr            = var.cidr
   azs             = slice(data.aws_availability_zones.available.names, 0, 2)
   private_subnets = var.private_subnets_for_endpoints
+  public_subnets  = var.public_subnets_for_natgw_per_az
 
   //properties
   enable_dns_hostnames = true
@@ -31,8 +32,8 @@ module "vpc" {
 
 
   //nat-gw
-  //enable_nat_gateway = true
-  //single_nat_gateway = false
-  //one_nat_gateway_per_az = true
+  enable_nat_gateway     = true
+  single_nat_gateway     = false
+  one_nat_gateway_per_az = true
 
 }

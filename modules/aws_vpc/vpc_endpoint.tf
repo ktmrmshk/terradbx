@@ -10,7 +10,7 @@ module "endpoints" {
       service_type    = "Gateway"
       route_table_ids = module.vpc.private_route_table_ids
       tags = {
-        Name = "${local.prefix}-s3-ep"
+        Name = "${var.prefix}-s3-ep"
       }
     },
     sts = {
@@ -18,7 +18,7 @@ module "endpoints" {
       private_dns_enabled = true
       subnet_ids          = module.vpc.private_subnets
       tags = {
-        Name = "${local.prefix}-sts-ep"
+        Name = "${var.prefix}-sts-ep"
       }
     }
 

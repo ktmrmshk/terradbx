@@ -1,5 +1,5 @@
-variable "aws_region" { default = "ap-northeast-1" }
-//variable "prefix" { default = "ktmr" }
+variable "aws_region" {}
+variable "prefix" {}
 
 variable "vpc_id" {}
 variable "cidrs" {}

@@ -8,7 +8,7 @@ In this scenario, single VPC deploment comes first, followed by each workspace d
 
 Each workspace has a subnet per az and az spans two zones, so two subnets per workspace will be created. Clusers in the workspace stays these subnets.
 
-
+![single_vpc_multi_workspaces](single_vpc_multi_workspaces.png)
 
 ### 1. clone this repo
 ```

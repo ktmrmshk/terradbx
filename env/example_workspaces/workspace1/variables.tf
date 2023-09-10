@@ -1,4 +1,5 @@
 variable "aws_region" {}
+variable "aws_account_id" {}
 variable "databricks_account_username" {}
 variable "databricks_account_password" {}
 variable "databricks_account_id" {}
@@ -15,3 +16,4 @@ variable "security_group" {}
 
 variable "credentials_id" {}
 variable "uc_default_metastore_id" {}
+variable "aws_role_uc_access_arn" {}

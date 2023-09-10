@@ -7,3 +7,4 @@ output "selected_azs" { value = module.exapmle_vpc.selected_azs }
 output "credentials_id" { value = module.example_cred.credentials_id }
 
 output "uc_metastore_id" { value = module.example_ucms.uc_metastore_id }
+output "aws_role_uc_access_arn" { value = module.example_ucms.aws_role_uc_access_arn}

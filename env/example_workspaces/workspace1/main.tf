@@ -1,5 +1,5 @@
 module "root_bucket" {
-  source = "../../modules/root_bucket/"
+  source = "../../../modules/root_bucket/"
 
   aws_region                  = var.aws_region
   databricks_account_username = var.databricks_account_username
@@ -9,7 +9,7 @@ module "root_bucket" {
 }
 
 module "cluster_subnets" {
-  source = "../../modules/subnet"
+  source = "../../../modules/subnet"
 
   prefix       = var.prefix
   aws_region   = var.aws_region
@@ -43,12 +43,9 @@ resource "databricks_mws_workspaces" "this" {
   }
 }
 
-output "databricks_host" {
-  value = databricks_mws_workspaces.this.workspace_url
-}
-
-output "databricks_token" {
-  value     = databricks_mws_workspaces.this.token[0].token_value
-  sensitive = true
+resource "databricks_metastore_assignment" "this" {
+  provider     = databricks.mws
+  metastore_id = var.uc_default_metastore_id
+  workspace_id = databricks_mws_workspaces.this.workspace_id
 }
 

@@ -14,3 +14,4 @@ variable "route_tables" {}
 variable "security_group" {}
 
 variable "credentials_id" {}
+variable "uc_default_metastore_id" {}

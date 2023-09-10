@@ -38,8 +38,8 @@ $ export TF_VAR_databricks_account_password='1234567890asdfghjk'
 $ export TF_VAR_databricks_account_id='11111111-222222-33333-44444-5555555'
 
 ### AWS
-export AWS_ACCESS_KEY_ID="ABC123EFG987"
-export AWS_SECRET_ACCESS_KEY="xxxxxxxxxxxxxxxxxxxx"
+$ export AWS_ACCESS_KEY_ID="ABC123EFG987"
+$ export AWS_SECRET_ACCESS_KEY="xxxxxxxxxxxxxxxxxxxx"
 ```
 
 

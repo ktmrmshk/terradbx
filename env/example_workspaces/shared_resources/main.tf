@@ -1,5 +1,5 @@
 module "exapmle_vpc" {
-  source = "../../modules/aws_vpc"
+  source = "../../../modules/aws_vpc"
 
   cidr                            = var.cidr
   private_subnets_for_endpoints   = var.private_subnets_for_endpoints
@@ -9,7 +9,7 @@ module "exapmle_vpc" {
 }
 
 module "example_cred" {
-  source = "../../modules/cross_account_iam"
+  source = "../../../modules/cross_account_iam"
 
   aws_region                  = var.aws_region
   databricks_account_username = var.databricks_account_username
@@ -18,4 +18,15 @@ module "example_cred" {
   prefix                      = "${local.prefix}-vpc-cred"
 }
 
+
+module "example_ucms" {
+  source = "../../../modules/uc_metastore"
+
+  aws_region                  = var.aws_region
+  databricks_account_username = var.databricks_account_username
+  databricks_account_password = var.databricks_account_password
+  databricks_account_id       = var.databricks_account_id
+  prefix                      = "${local.prefix}-vpc-cred"
+  aws_account_id              = var.aws_account_id
+}
 

@@ -1,12 +1,7 @@
-variable "aws_region" {}
-variable "prefix" {}
-
 variable "vpc_id" {}
 variable "cidrs" {}
 variable "azs" {}
 variable "route_tables" {}
-
-
 
 locals {
   subnets = {
@@ -19,5 +14,3 @@ locals {
   }
 
 }
-
-//output "debug" { value = local.subnets }

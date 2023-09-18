@@ -14,9 +14,6 @@ DBFS root bucket (S3)
 variables and example
 
 ```
-aws_region                  = "ap-northeast-1"
-databricks_account_username = "your_admin@yourdomain.com"
-databricks_account_password = "1234567890abcdefg"
 databricks_account_id       = "12345-67890-abcssa-asdfa"
 prefix                      = "ktmrtest123"
 ```
@@ -37,9 +34,6 @@ storage_configuration_id = "abc123"
 module "your_root_bucket" {
     source = "../../modules/../root_bucket/"
 
-    aws_region                  = "ap-northeast-1"
-    databricks_account_username = "your_admin@yourdomain.com"
-    databricks_account_password = "1234567890abcdefg"
     databricks_account_id       = "12345-67890-abcssa-asdfa"
     prefix                      = "ktmrtest123"
     }

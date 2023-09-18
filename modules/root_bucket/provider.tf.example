@@ -1,0 +1,14 @@
+
+
+provider "aws" {
+  region = "us-west-2"  //var.aws_region
+}
+
+provider "databricks" {
+
+  alias    = "mws"
+  host     = "https://accounts.cloud.databricks.com"
+  username = "your_user_name"  //var.databricks_account_username
+  password = "your_password"   //var.databricks_account_password
+}
+

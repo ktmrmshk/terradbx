@@ -12,9 +12,6 @@
 variables and examples
 
 ```
-aws_region = "ap-northeast-1"
-prefix     = "ktmr123121"
-
 vpc_id = "vpc-0c41d05733c29d824"
 cidrs  = ["10.99.100.0/24", "10.99.101.0/24"]
 azs = [
@@ -46,8 +43,6 @@ subnet_ids = [
 module "cluster_subnets" {
   source = "../../modules/subnet"
 
-  prefix     = "ktmr_mod2"
-  aws_region = var.aws_region
   vpc_id     = "vpc-0c41d05733c29d824"
   cidrs      = ["10.99.102.0/24", "10.99.103.0/24"]
   azs = [

@@ -1,18 +1,13 @@
 module "root_bucket" {
-  source = "../../../modules/root_bucket/"
+  source = "../root_bucket/"
 
-  aws_region                  = var.aws_region
-  databricks_account_username = var.databricks_account_username
-  databricks_account_password = var.databricks_account_password
-  databricks_account_id       = var.databricks_account_id
-  prefix                      = var.prefix
+  databricks_account_id = var.databricks_account_id
+  prefix                = var.prefix
 }
 
 module "cluster_subnets" {
-  source = "../../../modules/subnet"
+  source = "../subnet"
 
-  prefix       = var.prefix
-  aws_region   = var.aws_region
   vpc_id       = var.vpc_id
   cidrs        = var.cidrs
   azs          = var.azs

@@ -14,16 +14,3 @@ terraform {
 
   required_version = ">= 1.2.0"
 }
-
-provider "aws" {
-  region = var.aws_region
-}
-
-provider "databricks" {
-
-  alias    = "mws"
-  host     = "https://accounts.cloud.databricks.com"
-  username = var.databricks_account_username
-  password = var.databricks_account_password
-}
-

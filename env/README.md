@@ -19,7 +19,7 @@ README.md	env		modules
 
 $ cd env/single_vpc_multi_workspace_deployment
 $ ls 
-README.md		shared_resources	workspace1
+README.md  shared_resoruce_deployment  workspace_deployment
 ```
 
 ### 2. set env variables
@@ -46,7 +46,7 @@ $ export AWS_SECRET_ACCESS_KEY="xxxxxxxxxxxxxxxxxxxx"
 ### 3. deploy shared_resources (mainly VPC)
 
 ```
-$ cd shared_resources
+$ cd shared_resoruce_deployment
 $ cp terraform.tfvars.example terraform.tfvars
 $ vim terraform.tfvars
 
@@ -72,7 +72,7 @@ The output params are needed next step.
 ### 4. workspace deployment
 
 ```
-$ cd ../workspace1
+$ cd ../workspace_deployment
 $ cp terraform.tfvars.example terraform.tfvars
 $ vim terraform.tfvars
 

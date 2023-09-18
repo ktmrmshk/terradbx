@@ -17,12 +17,6 @@ uc_metastore_id        = "8dc9fe90-4a2f-4dd8-8e6d-c19b7b353fe9"
 aws_role_uc_access_arn = "arn:aws:iam::123123abcavc:role/yourproject-4ho1qddv-vpc-cred-uc-access"
 
 
-
-
 tag_environment = "Stag/Dev"
 tag_owner       = "your_name"
 tag_budget      = "marketing"
-
-databricks_account_id       = "1234abcd1234"
-databricks_account_username = "admin@your_company.com"
-databricks_account_password = "your_password"

@@ -50,12 +50,20 @@ $ cd shared_resoruce_deployment
 $ cp terraform.tfvars.example terraform.tfvars
 $ vim terraform.tfvars
 
-prefix                          = "your_project_shared"
-aws_region                      = "ap-northeast-1"
-aws_account_id                  = "123456789"
-cidr                            = "10.99.0.0/16"
+----
+prefix = "your_project_name"
+
+aws_region     = "us-west-2"
+aws_account_id = "123123abcavc"
+
+vpc_cidr                        = "10.99.0.0/16"
 private_subnets_for_endpoints   = ["10.99.254.0/24", "10.99.253.0/24"]
 public_subnets_for_natgw_per_az = ["10.99.252.0/24", "10.99.251.0/24"]
+
+tag_environment = "Stag/Dev"
+tag_owner       = "your_name"
+tag_budget      = "marketing"
+----
 
 (edit properly!)
 ```

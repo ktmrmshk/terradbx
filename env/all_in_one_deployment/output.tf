@@ -1,0 +1,1 @@
+output "workspace_url" { value = module.workspace.databricks_host }

@@ -13,8 +13,16 @@ module "shared_resources" {
 
 }
 
+/***
+resource "time_sleep" "sleep_10sec_before_ws_deployment" {
+  depends_on      = [module.shared_resources]
+  create_duration = "20s"
+}
+***/
+
 
 module "workspace" {
+  //depends_on = [time_sleep.sleep_10sec_before_ws_deployment]
   source = "../../modules/workspace"
 
   prefix         = var.prefix
